@@ -8,16 +8,27 @@ export type Project = {
   repo: string;
 };
 
+export type FeaturedProject = Project & {
+  images: { src: string; alt: string }[];
+};
+
+export const featuredProject: FeaturedProject = {
+  name: "Okelcor Website",
+  icon: "🌐",
+  tag: "546 commits · flagship project",
+  description:
+    "A global tyre supply platform for Okelcor GmbH. Buyers get live order tracking with payment milestones, downloadable trade documents (proforma invoices, packing lists, commercial invoices), a 260+ product catalog with advanced filtering, and instant quote requests. REX-certified export documentation, shipping to 40+ countries.",
+  stack: "TypeScript · Next.js",
+  live: "https://www.okelcor.com",
+  repo: "https://github.com/okelcor-gmbh/okelcor-website",
+  images: [
+    { src: "/projects/okelcor-order-tracking.jpg", alt: "Okelcor live order tracking with payment milestones" },
+    { src: "/projects/okelcor-homepage.jpg", alt: "Okelcor homepage, global tyre supply" },
+    { src: "/projects/okelcor-shop.jpg", alt: "Okelcor product catalog with filtering" },
+  ],
+};
+
 export const clientProjects: Project[] = [
-  {
-    name: "Okelcor Website",
-    icon: "🌐",
-    tag: "546 commits",
-    description: "Client website for Okelcor GmbH. A production Next.js and TypeScript site, live on a custom domain.",
-    stack: "TypeScript · Next.js",
-    live: "https://www.okelcor.com",
-    repo: "https://github.com/okelcor-gmbh/okelcor-website",
-  },
   {
     name: "Okelcor API",
     icon: "⚙️",

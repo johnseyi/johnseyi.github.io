@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { clientProjects, personalProjects } from "../data/projects";
+import { clientProjects, personalProjects, featuredProject } from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import FeaturedProject from "./FeaturedProject";
 
 const grid = {
   hidden: {},
@@ -18,6 +19,8 @@ export default function Work() {
       <p className="mb-8 max-w-[60ch] text-neutral-500 dark:text-neutral-400">
         Production sites and APIs built for real businesses, not tutorials, not clones.
       </p>
+
+      <FeaturedProject project={featuredProject} />
 
       <motion.div
         variants={grid}
