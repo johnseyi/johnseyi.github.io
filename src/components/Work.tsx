@@ -34,7 +34,7 @@ export default function Work() {
       </motion.div>
 
       <h2 className="mt-14 mb-8 text-[1.7rem] font-bold text-neutral-900 dark:text-neutral-50">
-        Personal &amp; social-impact projects
+        Hackathons, prototypes &amp; social impact
       </h2>
       <motion.div
         variants={grid}

@@ -40,16 +40,20 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p variants={item} className="mb-4 max-w-[58ch] text-[1.15rem] text-neutral-600 dark:text-neutral-400">
-          Web, mobile, and the backends underneath: TypeScript and Next.js, Flutter, PHP, and Fastify,
-          all shaped by a background in networking and cybersecurity.
+          Web, mobile, and the backends underneath: TypeScript and Next.js, Laravel, Flutter, and
+          PostgreSQL, all shaped by a background in networking and cybersecurity.
         </motion.p>
 
         <motion.p variants={item} className="mb-8 text-sm text-neutral-500 dark:text-neutral-500">
-          Currently shipping features at{" "}
+          Currently building the{" "}
+          <a href="https://www.okelcor.com" target="_blank" rel="noopener" className="font-medium text-emerald-700 dark:text-emerald-400 hover:underline">
+            Okelcor
+          </a>{" "}
+          platform and a multi-tenant cinema operating system, alongside health-tech work at{" "}
           <a href="https://github.com/Wellapath-org" target="_blank" rel="noopener" className="font-medium text-emerald-700 dark:text-emerald-400 hover:underline">
             Wellapath
           </a>
-          , alongside freelance client work.
+          .
         </motion.p>
 
         <motion.div variants={item} className="flex flex-wrap gap-3">

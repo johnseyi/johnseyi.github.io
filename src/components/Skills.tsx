@@ -1,8 +1,8 @@
 const groups = [
   { title: "Frontend", skills: ["TypeScript", "Next.js", "React", "Tailwind CSS"] },
-  { title: "Backend", skills: ["Node.js / Fastify", "PHP", "Supabase", "PostgreSQL"] },
-  { title: "Mobile", skills: ["Flutter", "Dart"] },
-  { title: "Other", skills: ["Networking & Cybersecurity", "Git / GitHub", "Vercel / Netlify"] },
+  { title: "Backend", skills: ["Laravel / PHP", "Node.js / Fastify", "PostgreSQL", "Supabase", "Redis"] },
+  { title: "Mobile", skills: ["Flutter", "React Native (Expo)", "Offline-first PWAs"] },
+  { title: "Other", skills: ["Payments (Stripe · Mobile Money)", "CI/CD · GitHub Actions", "Networking & Cybersecurity"] },
 ];
 
 export default function Skills() {

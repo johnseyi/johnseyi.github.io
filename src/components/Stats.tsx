@@ -3,10 +3,10 @@ import { motion, useInView } from "framer-motion";
 import { useCountUp } from "../hooks/useCountUp";
 
 const stats = [
-  { label: "Commits shipped", target: 1165, suffix: "+" },
-  { label: "Organizations", target: 5, suffix: "" },
-  { label: "Projects shipped", target: 11, suffix: "" },
-  { label: "Live in production", target: 5, suffix: "" },
+  { label: "Commits shipped", target: 1640, suffix: "+" },
+  { label: "Organizations", target: 6, suffix: "" },
+  { label: "Projects shipped", target: 16, suffix: "" },
+  { label: "Live in production", target: 9, suffix: "" },
 ];
 
 function Stat({ label, target, suffix, active }: { label: string; target: number; suffix: string; active: boolean }) {

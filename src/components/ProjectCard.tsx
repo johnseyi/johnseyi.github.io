@@ -23,9 +23,11 @@ export default function ProjectCard({ project, accented }: { project: Project; a
             Live ↗
           </a>
         )}
-        <a href={project.repo} target="_blank" rel="noopener" className="text-emerald-700 dark:text-emerald-400 hover:underline">
-          Repo →
-        </a>
+        {project.repo && (
+          <a href={project.repo} target="_blank" rel="noopener" className="text-emerald-700 dark:text-emerald-400 hover:underline">
+            Repo →
+          </a>
+        )}
       </div>
     </motion.article>
   );
