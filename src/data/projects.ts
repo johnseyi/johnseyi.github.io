@@ -18,7 +18,7 @@ export const featuredProject: FeaturedProject = {
   tag: "625 commits · flagship project",
   description:
     "A global tyre supply platform for Okelcor GmbH. Buyers get live order tracking with payment milestones, downloadable trade documents (proforma invoices, packing lists, commercial invoices), a 260+ product catalog with advanced filtering, Stripe Checkout, and instant quote requests. REX-certified export documentation, shipping to 40+ countries.",
-  stack: "TypeScript · Next.js 15 · Tailwind v4",
+  stack: "TypeScript · Next.js 16 · Tailwind v4",
   live: "https://www.okelcor.com",
   repo: "https://github.com/okelcor-gmbh/okelcor-website",
   images: [
