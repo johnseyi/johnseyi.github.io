@@ -23,7 +23,7 @@ export default function Header() {
           </span>
         </a>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3 sm:gap-6">
           <nav aria-label="Primary" className="hidden gap-6 md:flex">
             {navLinks.map((link) => (
               <a
@@ -41,7 +41,7 @@ export default function Header() {
 
           <a
             href="#contact"
-            className="hidden rounded-full px-4 py-2 text-[0.85rem] font-semibold transition-opacity hover:opacity-85 sm:inline-block"
+            className="rounded-full px-4 py-2 text-[0.85rem] font-semibold whitespace-nowrap transition-opacity hover:opacity-85"
             style={{ background: "var(--accent)", color: "var(--paper)" }}
           >
             Get in touch

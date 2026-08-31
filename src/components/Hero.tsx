@@ -24,7 +24,7 @@ export default function Hero() {
           className="text-[clamp(2.2rem,5.4vw,3.75rem)] font-extrabold leading-[1.06]"
           style={{ color: "var(--ink)" }}
         >
-          I build the systems<br />businesses actually run on.
+          I build the systems<br className="hidden sm:inline" />businesses actually run on.
         </motion.h1>
 
         <motion.p
