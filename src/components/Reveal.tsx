@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export default function Reveal({
   children,
@@ -9,6 +9,12 @@ export default function Reveal({
   delay?: number;
   className?: string;
 }) {
+  const reduce = useReducedMotion();
+
+  // Render the content outright rather than fading it in — this also guarantees
+  // nothing stays at opacity 0 if the viewport observer never fires.
+  if (reduce) return <div className={className}>{children}</div>;
+
   return (
     <motion.div
       className={className}

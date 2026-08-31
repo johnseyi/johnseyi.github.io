@@ -58,6 +58,14 @@ h1, h2, h3 {
   background: var(--accent-soft);
 }
 
+/* Recruiters do save pages as PDF — make sure scroll-revealed content is never blank on paper. */
+@media print {
+  *, *::before, *::after {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {

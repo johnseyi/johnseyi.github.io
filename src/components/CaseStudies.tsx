@@ -66,9 +66,9 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
 
       {study.images && (
         <Reveal>
-          <div className="my-8 grid gap-4 sm:grid-cols-3">
+          <div className="my-8 grid gap-4 sm:grid-cols-2">
             {study.images.map((img, i) => (
-              <figure key={img.src} className={i === 0 ? "sm:col-span-3" : ""}>
+              <figure key={img.src} className={i === 0 ? "sm:col-span-2" : ""}>
                 <img
                   src={img.src}
                   alt={img.alt}
