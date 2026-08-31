@@ -34,6 +34,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Clear the sticky header when a nav link jumps to a section. */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--paper);
