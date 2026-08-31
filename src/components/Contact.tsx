@@ -1,28 +1,67 @@
+import Reveal from "./Reveal";
+
+/**
+ * To offer the CV as a download: drop the PDF at public/John-Oluwaseyi-CV.pdf
+ * and set this to "/John-Oluwaseyi-CV.pdf". Left null so the button never 404s.
+ */
+const CV_URL: string | null = null;
+
+const links = [
+  { label: "GitHub", href: "https://github.com/johnseyi", detail: "github.com/johnseyi" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/johnoluwaseyi", detail: "in/johnoluwaseyi" },
+];
+
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-5xl border-t border-black/10 dark:border-white/10 px-6 py-16">
-      <div className="rounded-2xl border border-black/10 dark:border-white/10 bg-neutral-50 dark:bg-white/5 p-12 text-center sm:p-8">
-        <h2 className="mb-2 text-[1.7rem] font-bold text-neutral-900 dark:text-neutral-50">Let's build something.</h2>
-        <p className="mx-auto mb-6 max-w-[60ch] text-neutral-500 dark:text-neutral-400">
-          Open to freelance and full-time opportunities.
-        </p>
-        <div className="flex flex-wrap justify-center gap-3">
-          <a
-            href="mailto:leojohnseyi@gmail.com"
-            className="inline-flex items-center gap-1.5 rounded-full bg-emerald-800 dark:bg-emerald-400 px-6 py-3 text-sm font-semibold text-white dark:text-[#08201b] transition-transform hover:-translate-y-0.5"
+    <section id="contact" className="mx-auto max-w-6xl px-6 pb-20 pt-8">
+      <Reveal>
+        <div className="rounded-2xl border p-8 sm:p-12" style={{ borderColor: "var(--line)", background: "var(--surface)" }}>
+          <p
+            className="mb-3 mono text-[0.72rem] font-medium uppercase tracking-[0.16em]"
+            style={{ color: "var(--accent)" }}
           >
-            leojohnseyi@gmail.com
-          </a>
-          <a
-            href="https://github.com/johnseyi"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-1.5 rounded-full border border-black/10 dark:border-white/15 px-6 py-3 text-sm font-semibold text-neutral-900 dark:text-neutral-50 transition-transform hover:-translate-y-0.5 hover:bg-white dark:hover:bg-white/10"
-          >
-            GitHub
-          </a>
+            Contact
+          </p>
+          <h2 className="max-w-[24ch] text-[clamp(1.6rem,3vw,2.3rem)] font-bold" style={{ color: "var(--ink)" }}>
+            If any of this is the kind of problem your team has, let us talk.
+          </h2>
+          <p className="mt-4 max-w-[58ch] text-[1.02rem] leading-relaxed" style={{ color: "var(--muted)" }}>
+            I am open to full-stack engineering roles, remote or in Kampala, and to contract work.
+            The fastest way to reach me is email — I reply the same day.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="mailto:leojohnseyi@gmail.com"
+              className="rounded-full px-6 py-3 text-[0.92rem] font-semibold transition-opacity hover:opacity-85"
+              style={{ background: "var(--accent)", color: "var(--paper)" }}
+            >
+              leojohnseyi@gmail.com
+            </a>
+            {CV_URL && (
+              <a
+                href={CV_URL}
+                className="rounded-full border px-6 py-3 text-[0.92rem] font-semibold"
+                style={{ borderColor: "var(--line)", color: "var(--ink)" }}
+              >
+                Download CV
+              </a>
+            )}
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                target="_blank"
+                rel="noopener"
+                className="rounded-full border px-6 py-3 text-[0.92rem] font-semibold"
+                style={{ borderColor: "var(--line)", color: "var(--ink)" }}
+              >
+                {l.label} ↗
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

@@ -1,18 +1,23 @@
 # johnseyi.github.io
 
-Personal portfolio of John Oluwaseyi — full-stack developer based in Kampala, Uganda.
+Personal portfolio of John Oluwaseyi — full-stack engineer based in Kampala, Uganda.
 
 **Live:** https://johnseyi.github.io
 
-A single-page portfolio covering who I am, the projects I've shipped, the stack I work with, and how to reach me. Built as a fast, static React app with light/dark theming and scroll-driven animation.
+A case-study-led portfolio rather than a project gallery. Each of the four featured systems is
+written up as a constraint, what was built, and the single engineering decision behind it, with
+hand-drawn SVG architecture diagrams for the offline sync, multi-tenancy and on-device clinical
+pipelines.
 
 ## Features
 
-- Hero, About, Skills, Work (featured project + project cards), Stats, and Contact sections
-- Light/dark theme toggle that respects `prefers-color-scheme` and persists the choice in `localStorage`
-- Animated stat counters via a custom `useCountUp` hook
-- Motion and reveal animations with Framer Motion
-- Project data kept in a single typed module (`src/data/projects.ts`)
+- Four long-form case studies (Okelcor GmbH, Okelcor Partner, Century Cinemax, WellaPath)
+- Inline SVG architecture diagrams, theme-aware via CSS custom properties and readable at any width
+- Light/dark theming driven by CSS variables, with the stored theme applied before first paint so
+  dark-mode visitors never see a white flash
+- Reduced-motion support — all animation is disabled under `prefers-reduced-motion`
+- Person JSON-LD, Open Graph and canonical tags for link previews and search
+- All content in one typed module (`src/data/work.ts`), so copy changes never touch a component
 
 ## Tech stack
 
@@ -32,16 +37,25 @@ npm run preview   # preview the production build locally
 
 ## Deployment
 
-Deployed to GitHub Pages by GitHub Actions (`.github/workflows/deploy.yml`): every push to `main` runs `npm ci && npm run build` and publishes `dist/` with `actions/deploy-pages`. No manual deploy steps.
+Deployed to GitHub Pages by GitHub Actions (`.github/workflows/deploy.yml`): every push to `main`
+runs `npm ci && npm run build` and publishes `dist/` with `actions/deploy-pages`. No manual deploy
+steps.
+
+## Offering the CV as a download
+
+Drop the PDF at `public/John-Oluwaseyi-CV.pdf` and set `CV_URL` in `src/components/Contact.tsx` to
+`"/John-Oluwaseyi-CV.pdf"`. The button is hidden while that value is `null` so the link can never
+404 in front of an employer.
 
 ## Project structure
 
 ```
 src/
-  components/   # Header, Hero, About, Skills, Work, Stats, Contact, Footer, ...
-  data/         # projects.ts — typed project listing
-  hooks/        # useTheme (dark mode), useCountUp (animated stats)
+  components/   # Header, Hero, Clients, CaseStudies, Diagrams, Principles,
+                # AlsoShipped, Stack, About, Contact, Footer, Reveal
+  data/         # work.ts — case studies, principles, shipped list, stack groups
+  hooks/        # useTheme (light/dark)
   App.tsx
   main.tsx
-  index.css
+  index.css     # design tokens for both themes
 ```

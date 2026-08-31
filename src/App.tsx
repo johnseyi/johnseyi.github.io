@@ -1,21 +1,25 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import Work from "./components/Work";
-import Skills from "./components/Skills";
+import Clients from "./components/Clients";
+import CaseStudies from "./components/CaseStudies";
+import Principles from "./components/Principles";
+import AlsoShipped from "./components/AlsoShipped";
+import Stack from "./components/Stack";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div id="top" className="min-h-screen bg-white text-neutral-900 dark:bg-[#0d0f11] dark:text-neutral-50">
+    <div id="top" className="min-h-screen">
       <Header />
       <main>
         <Hero />
-        <Stats />
-        <Work />
-        <Skills />
+        <Clients />
+        <CaseStudies />
+        <Principles />
+        <AlsoShipped />
+        <Stack />
         <About />
         <Contact />
       </main>

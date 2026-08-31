@@ -1,73 +1,72 @@
 import { motion } from "framer-motion";
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
-
+const container = { hidden: {}, show: { transition: { staggerChildren: 0.09 } } };
 const item = {
   hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
 };
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 pt-28 pb-16 mx-auto max-w-5xl">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-16 -top-28 h-[22rem] w-[22rem] rounded-full opacity-30 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--color-accent), transparent 70%)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -left-24 top-20 h-72 w-72 rounded-full opacity-20 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--color-accent-2), transparent 70%)" }}
-      />
-
-      <motion.div variants={container} initial="hidden" animate="show">
+    <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
+      <motion.div variants={container} initial="hidden" animate="show" className="max-w-[52rem]">
         <motion.p
           variants={item}
-          className="mb-5 inline-block rounded-full border border-black/10 dark:border-white/15 bg-neutral-50 dark:bg-white/5 px-3.5 py-1.5 text-[0.85rem] font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400"
+          className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.8rem] font-medium"
+          style={{ borderColor: "var(--line)", color: "var(--muted)" }}
         >
-          Full-Stack Developer · Kampala, Uganda
+          <span className="inline-block h-2 w-2 rounded-full" style={{ background: "var(--accent)" }} />
+          Open to full-stack engineering roles — remote or Kampala
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="mb-5 max-w-[18ch] text-[clamp(2.1rem,4.6vw,3.4rem)] font-bold leading-[1.1] text-neutral-900 dark:text-neutral-50"
+          className="text-[clamp(2.2rem,5.4vw,3.75rem)] font-extrabold leading-[1.06]"
+          style={{ color: "var(--ink)" }}
         >
-          I build production systems <span className="grad-text">real businesses run on.</span>
+          I build the systems<br />businesses actually run on.
         </motion.h1>
 
-        <motion.p variants={item} className="mb-4 max-w-[58ch] text-[1.15rem] text-neutral-600 dark:text-neutral-400">
-          Web, mobile, and the backends underneath: TypeScript and Next.js, Laravel, Flutter, and
-          PostgreSQL, all shaped by a background in networking and cybersecurity.
+        <motion.p
+          variants={item}
+          className="mt-7 max-w-[58ch] text-[1.15rem] leading-relaxed"
+          style={{ color: "var(--ink)" }}
+        >
+          Four are in production right now: a B2B export platform for a German tyre exporter, a
+          multi-tenant cinema operating system in Uganda, an offline sales network running across
+          three countries, and clinical decision support for Nigerian health workers.{" "}
+          <span style={{ color: "var(--muted)" }}>On most of them I was the only engineer.</span>
         </motion.p>
 
-        <motion.p variants={item} className="mb-8 text-sm text-neutral-500 dark:text-neutral-500">
-          Currently building the{" "}
-          <a href="https://www.okelcor.com" target="_blank" rel="noopener" className="font-medium text-emerald-700 dark:text-emerald-400 hover:underline">
-            Okelcor
-          </a>{" "}
-          platform and a multi-tenant cinema operating system, alongside health-tech work at{" "}
-          <a href="https://github.com/Wellapath-org" target="_blank" rel="noopener" className="font-medium text-emerald-700 dark:text-emerald-400 hover:underline">
-            Wellapath
-          </a>
-          .
+        <motion.p variants={item} className="mt-5 max-w-[58ch] text-[1.02rem] leading-relaxed" style={{ color: "var(--muted)" }}>
+          My work concentrates on the parts that break once software leaves the demo: sync that
+          survives a dead connection, payments that clear over Mobile Money as readily as a card,
+          money held in six currencies at once, and invoices a revenue authority will accept.
         </motion.p>
 
-        <motion.div variants={item} className="flex flex-wrap gap-3">
+        <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
           <a
             href="#work"
-            className="inline-flex items-center gap-1.5 rounded-full bg-emerald-800 dark:bg-emerald-400 px-6 py-3 text-sm font-semibold text-white dark:text-[#08201b] transition-transform hover:-translate-y-0.5"
+            className="rounded-full px-6 py-3 text-[0.92rem] font-semibold transition-opacity hover:opacity-85"
+            style={{ background: "var(--accent)", color: "var(--paper)" }}
           >
-            See the work <span aria-hidden="true">→</span>
+            Read the case studies
           </a>
           <a
             href="mailto:leojohnseyi@gmail.com"
-            className="inline-flex items-center gap-1.5 rounded-full border border-black/10 dark:border-white/15 px-6 py-3 text-sm font-semibold text-neutral-900 dark:text-neutral-50 transition-transform hover:-translate-y-0.5 hover:bg-neutral-50 dark:hover:bg-white/5"
+            className="rounded-full border px-6 py-3 text-[0.92rem] font-semibold transition-colors"
+            style={{ borderColor: "var(--line)", color: "var(--ink)" }}
           >
-            Get in touch
+            leojohnseyi@gmail.com
+          </a>
+          <a
+            href="https://github.com/johnseyi"
+            target="_blank"
+            rel="noopener"
+            className="px-2 py-3 text-[0.92rem] font-semibold underline-offset-4 hover:underline"
+            style={{ color: "var(--muted)" }}
+          >
+            GitHub ↗
           </a>
         </motion.div>
       </motion.div>
