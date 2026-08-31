@@ -17,7 +17,7 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="max-w-[16ch] text-[clamp(2.2rem,5.4vw,3.75rem)] font-extrabold leading-[1.06]"
+          className="text-[clamp(2.2rem,5.4vw,3.75rem)] font-extrabold leading-[1.06]"
           style={{ color: "var(--ink)" }}
         >
           I build the systems businesses actually run on.
