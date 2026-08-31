@@ -186,7 +186,7 @@ export function ClinicalDiagram() {
         The whole pipeline runs on the device. No patient data is transmitted, and the app boots from cached config when there is no network.
       </text>
       <text x="8" y="202" fontSize="11.5" fill={muted}>
-        Guidance is phrased as an action to take, never as a diagnosis — a linter blocks diagnostic wording before it can ship.
+        Guidance is phrased as an action to take, never as a diagnosis. A linter blocks diagnostic wording before it can ship.
       </text>
     </Frame>
   );

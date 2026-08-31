@@ -36,7 +36,7 @@ export default function About() {
             <p>
               Most of my work has been as the sole engineer on the project. That means owning the
               database schema, the deploy pipeline, and the conversation with the client about what
-              we are actually building — and living with every one of those decisions afterwards. On
+              we are actually building, then living with every one of those decisions afterwards. On
               the Century Cinemax platform I work in a two-person team with module ownership, ADRs
               and CI-enforced boundaries, which I enjoy just as much.
             </p>

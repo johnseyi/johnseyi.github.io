@@ -27,7 +27,7 @@ export default function Contact() {
           </h2>
           <p className="mt-4 max-w-[58ch] text-[1.02rem] leading-relaxed" style={{ color: "var(--muted)" }}>
             I am open to full-stack engineering roles, remote or in Kampala, and to contract work.
-            The fastest way to reach me is email — I reply the same day.
+            The fastest way to reach me is email, and I reply the same day.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

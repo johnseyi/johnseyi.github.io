@@ -10,13 +10,9 @@ export default function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-20 pb-16 sm:pt-28">
       <motion.div variants={container} initial="hidden" animate="show" className="max-w-[52rem]">
-        <motion.p
-          variants={item}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-[0.8rem] font-medium"
-          style={{ borderColor: "var(--line)", color: "var(--muted)" }}
-        >
-          <span className="inline-block h-2 w-2 rounded-full" style={{ background: "var(--accent)" }} />
-          Open to full-stack engineering roles — remote or Kampala
+        <motion.p variants={item} className="mb-7 flex items-center gap-3 text-[0.88rem]">
+          <span aria-hidden="true" className="h-px w-10 flex-none" style={{ background: "var(--accent)" }} />
+          <span style={{ color: "var(--muted)" }}>Open to full-stack roles, remote or in Kampala</span>
         </motion.p>
 
         <motion.h1

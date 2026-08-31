@@ -8,7 +8,7 @@ export default function AlsoShipped() {
         <SectionHeading
           kicker="Also shipped"
           title="Other things that went live"
-          lead="Client builds, a hackathon entry, and nonprofit work — smaller in scope, but each one deployed and used."
+          lead="Client builds, a hackathon entry, and nonprofit work. Smaller in scope, but each one deployed and used."
         />
       </div>
 

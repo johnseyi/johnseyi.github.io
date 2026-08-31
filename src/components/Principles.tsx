@@ -8,7 +8,7 @@ export default function Principles() {
         <SectionHeading
           kicker="How I build"
           title="Four rules I have earned the hard way"
-          lead="Most of my work has been for businesses where a bug is not an inconvenience — it is a partner's commission, a customer stuck in a lobby, or a health worker given the wrong advice. These are the habits that came out of that."
+          lead="Most of my work has been for businesses where a bug is not an inconvenience. It is a partner's commission, a customer stuck in a lobby, or a health worker given the wrong advice. These are the habits that came out of that."
         />
       </div>
 

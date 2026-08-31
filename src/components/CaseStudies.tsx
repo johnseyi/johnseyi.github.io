@@ -131,7 +131,7 @@ function Study({ study, index }: { study: CaseStudy; index: number }) {
           )}
           {study.links.length === 0 && (
             <span className="text-[0.85rem]" style={{ color: "var(--muted)" }}>
-              Private repository — happy to walk through the architecture in an interview.
+              Private repository. Happy to walk through the architecture in an interview.
             </span>
           )}
         </div>

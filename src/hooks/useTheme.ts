@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
+// Light is the default for everyone. Dark is opt-in and remembered per browser.
 function getInitialTheme(): Theme {
   try {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored === "light" || stored === "dark") return stored;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    return localStorage.getItem("theme") === "dark" ? "dark" : "light";
   } catch {
     return "light";
   }
@@ -20,7 +19,7 @@ export function useTheme() {
     try {
       localStorage.setItem("theme", theme);
     } catch {
-      /* storage unavailable — the theme still applies for this visit */
+      /* storage unavailable, the theme still applies for this visit */
     }
   }, [theme]);
 

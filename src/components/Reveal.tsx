@@ -11,7 +11,7 @@ export default function Reveal({
 }) {
   const reduce = useReducedMotion();
 
-  // Render the content outright rather than fading it in — this also guarantees
+  // Render the content outright rather than fading it in. This also guarantees
   // nothing stays at opacity 0 if the viewport observer never fires.
   if (reduce) return <div className={className}>{children}</div>;
 

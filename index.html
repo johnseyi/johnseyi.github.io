@@ -3,18 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>John Oluwaseyi — Full-Stack Engineer</title>
-<meta name="description" content="Full-stack engineer in Kampala, Uganda. I build production systems for businesses in hard conditions — offline-first sync, Mobile Money and card payments, multi-currency, and tax-authority invoicing. Case studies from Okelcor GmbH, Century Cinemax, and WellaPath." />
+<title>John Oluwaseyi | Full-Stack Engineer</title>
+<meta name="description" content="Full-stack engineer in Kampala, Uganda. I build production systems for businesses in hard conditions: offline-first sync, Mobile Money and card payments, multi-currency, and tax-authority invoicing. Case studies from Okelcor GmbH, Century Cinemax, and WellaPath." />
 <meta name="author" content="Ayodele John Oluwaseyi" />
 <link rel="canonical" href="https://johnseyi.github.io/" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://johnseyi.github.io/" />
-<meta property="og:title" content="John Oluwaseyi — Full-Stack Engineer" />
+<meta property="og:title" content="John Oluwaseyi | Full-Stack Engineer" />
 <meta property="og:description" content="Production systems for businesses in hard conditions: offline-first sync, Mobile Money payments, multi-currency, tax-authority invoicing. Case studies inside." />
 <meta property="og:image" content="https://johnseyi.github.io/projects/okelcor-order-tracking.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)" />
-<meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#fbfaf8" />
 <link rel="icon" href="https://avatars.githubusercontent.com/u/265010297?v=4" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,13 +40,12 @@
 </script>
 </head>
 <script>
-/* Apply the stored theme before first paint so dark-mode visitors never see a white flash. */
+/* Light is the default. Dark applies only when the visitor has chosen it, and is
+   set before first paint so they never see a flash of the light theme. */
 try {
-  var t = localStorage.getItem("theme");
-  if (t !== "light" && t !== "dark") {
-    t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
   }
-  if (t === "dark") document.documentElement.classList.add("dark");
 } catch (e) {}
 </script>
 <body>

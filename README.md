@@ -1,6 +1,6 @@
 # johnseyi.github.io
 
-Personal portfolio of John Oluwaseyi — full-stack engineer based in Kampala, Uganda.
+Personal portfolio of John Oluwaseyi, full-stack engineer based in Kampala, Uganda.
 
 **Live:** https://johnseyi.github.io
 
@@ -13,9 +13,9 @@ pipelines.
 
 - Four long-form case studies (Okelcor GmbH, Okelcor Partner, Century Cinemax, WellaPath)
 - Inline SVG architecture diagrams, theme-aware via CSS custom properties and readable at any width
-- Light/dark theming driven by CSS variables, with the stored theme applied before first paint so
-  dark-mode visitors never see a white flash
-- Reduced-motion support — all animation is disabled under `prefers-reduced-motion`
+- Light theme by default, with dark as an opt-in choice remembered per browser and applied before
+  first paint so there is no flash on reload
+- Reduced-motion support, so all animation is disabled under `prefers-reduced-motion`
 - Person JSON-LD, Open Graph and canonical tags for link previews and search
 - All content in one typed module (`src/data/work.ts`), so copy changes never touch a component
 
@@ -53,7 +53,7 @@ Drop the PDF at `public/John-Oluwaseyi-CV.pdf` and set `CV_URL` in `src/componen
 src/
   components/   # Header, Hero, Clients, CaseStudies, Diagrams, Principles,
                 # AlsoShipped, Stack, About, Contact, Footer, Reveal
-  data/         # work.ts — case studies, principles, shipped list, stack groups
+  data/         # work.ts: case studies, principles, shipped list, stack groups
   hooks/        # useTheme (light/dark)
   App.tsx
   main.tsx
