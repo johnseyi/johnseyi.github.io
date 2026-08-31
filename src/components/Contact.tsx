@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
  * To offer the CV as a download: drop the PDF at public/John-Oluwaseyi-CV.pdf
  * and set this to "/John-Oluwaseyi-CV.pdf". Left null so the button never 404s.
  */
-const CV_URL: string | null = null;
+const CV_URL: string | null =  "/John-Oluwaseyi-CV.pdf";
 
 const links = [
   { label: "GitHub", href: "https://github.com/johnseyi", detail: "github.com/johnseyi" },
