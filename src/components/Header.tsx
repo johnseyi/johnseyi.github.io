@@ -1,6 +1,7 @@
 import { useTheme } from "../hooks/useTheme";
 
 const navLinks = [
+  { href: "#apps", label: "Apps" },
   { href: "#work", label: "Work" },
   { href: "#how", label: "How I build" },
   { href: "#stack", label: "Stack" },

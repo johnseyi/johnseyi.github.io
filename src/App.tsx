@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Clients from "./components/Clients";
+import Apps from "./components/Apps";
 import CaseStudies from "./components/CaseStudies";
 import Principles from "./components/Principles";
 import AlsoShipped from "./components/AlsoShipped";
@@ -16,6 +17,7 @@ export default function App() {
       <main>
         <Hero />
         <Clients />
+        <Apps />
         <CaseStudies />
         <Principles />
         <AlsoShipped />

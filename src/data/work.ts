@@ -24,12 +24,12 @@ export const caseStudies: CaseStudy[] = [
     place: "Munich, Germany",
     role: "Sole engineer",
     period: "Mar 2026 to present",
-    scale: "1,095+ commits across 4 applications",
+    scale: "1,300+ commits across 4 applications",
     tagline: "A tyre exporter's entire commercial operation, rebuilt as software.",
     constraint:
       "Okelcor ships tyres from Europe to more than 40 countries. Quotes, proforma invoices, packing lists and customs paperwork were moving by email and spreadsheet, and every order needed a human to assemble the document pack by hand.",
     built: [
-      "A Next.js storefront with a 260+ product catalogue, filtering, and instant quote requests. 625 commits, live at okelcor.com.",
+      "A Next.js storefront with a 260+ product catalogue, filtering, and instant quote requests. 700+ commits, live at okelcor.com.",
       "A Laravel 13 API behind it: 178 migrations, ~75 admin controllers, Stripe and Adyen payments, Google 2FA, Pusher realtime, and a partner portal.",
       "Automated trade documents (proforma and commercial invoices, packing lists) generated as PDFs, plus VAT handling and EU export declarations.",
       "Customer-facing order tracking that exposes payment milestones and container movement, so buyers stop emailing to ask where their freight is.",
@@ -142,8 +142,87 @@ export const caseStudies: CaseStudy[] = [
     links: [
       { label: "Mobile repo", href: "https://github.com/Wellapath-org/wellapath-mobile" },
       { label: "Knowledge base", href: "https://github.com/Wellapath-org/wellapath-knowledge-base" },
-      { label: "Site", href: "https://wellapath-website-ivory.vercel.app" },
+      { label: "wellapath.org", href: "https://wellapath.org" },
     ],
+  },
+];
+
+export type App = {
+  id: string;
+  name: string;
+  kind: string;
+  platform: string;
+  status: string;
+  tagline: string;
+  features: string[];
+  stack: string[];
+  links: Link[];
+};
+
+export const apps: App[] = [
+  {
+    id: "wellapath-app",
+    name: "WellaPath",
+    kind: "Clinical decision support",
+    platform: "Flutter · Android & iOS",
+    status: "Android build in Google Play internal testing",
+    tagline: "Triage guidance for health workers in Nigerian clinics, built to work with no signal at all.",
+    features: [
+      "A four-stage decision engine that runs entirely on the phone, so no patient data ever leaves the device.",
+      "Boots from last-known-good config stored in Hive when the network is gone, and picks up new clinical content without an app release.",
+      "Red-flag results override the scoring output instead of being averaged with it.",
+    ],
+    stack: ["Flutter", "Dart", "Hive", "Dio"],
+    links: [
+      { label: "Repo", href: "https://github.com/Wellapath-org/wellapath-mobile" },
+      { label: "wellapath.org", href: "https://wellapath.org" },
+    ],
+  },
+  {
+    id: "okelcor-ops",
+    name: "Okelcor Ops",
+    kind: "Operations companion app",
+    platform: "React Native · Expo · Android & iOS",
+    status: "v1 to live chat in four days",
+    tagline: "The tyre exporter's back office in the team's pocket: orders, quotes, customers and security.",
+    features: [
+      "Sign-in with 2FA and recovery codes, a biometric app lock, and tokens held in the device's secure store.",
+      "Live customer chat over Crisp with Pusher realtime and an online/offline presence toggle.",
+      "Push notifications that open the exact order or quote they are about, plus unread badge counts.",
+      "Orders, quotes, an email-style inbox, a revenue dashboard, quick actions and dark mode.",
+    ],
+    stack: ["React Native 0.86", "Expo 57", "TypeScript", "TanStack Query", "NativeWind", "EAS"],
+    links: [],
+  },
+  {
+    id: "okelcor-partner-app",
+    name: "Okelcor Partner",
+    kind: "Offline-first sales log",
+    platform: "Android (Trusted Web Activity) · installable PWA",
+    status: "Live with partners in Ghana and Nigeria · signed Play bundle ready",
+    tagline: "Partners log daily sales on cheap Android phones, online or not, and nothing is ever counted twice.",
+    features: [
+      "Sales are written to an IndexedDB outbox first and synced with client-generated IDs, so retries never duplicate a sale.",
+      "Cold-starts with no network, with phone + PIN auth against a locally held session.",
+      "Packaged for Google Play with Bubblewrap and verified through Digital Asset Links, so a web deploy updates the app without a store release.",
+    ],
+    stack: ["Next.js", "TypeScript", "Service Workers", "IndexedDB", "Bubblewrap"],
+    links: [{ label: "partners.okelcor.com", href: "https://partners.okelcor.com" }],
+  },
+  {
+    id: "kampala-pressure",
+    name: "Kampala Pressure",
+    kind: "Mobile-first life game",
+    platform: "React · TypeScript · phone-first web",
+    status: "In build · personal project",
+    tagline: "One week of life in Kampala, three different starting points, and rent due on Friday.",
+    features: [
+      "A content-driven decision engine: new lives, events and endings are added as data, with no engine changes.",
+      "Balance simulations in the test suite report win rates for every life, so difficulty is measured, not guessed.",
+      "A bottom-tab phone layout with in-game chats, and a shareable 1080×1080 result card through the Web Share API.",
+    ],
+    stack: ["React 19", "TypeScript", "Vite", "Vitest", "SVG"],
+    links: [],
   },
 ];
 
@@ -234,8 +313,8 @@ export const alsoShipped: Shipped[] = [
     what:
       "Site and donation flow for a mental-health nonprofit, with pledges validated by zod, stored in Supabase, and receipted with a server-generated PDF.",
     stack: "Next.js · Supabase · Resend",
-    live: "https://healthy-steps-foundation.vercel.app",
-    repo: "https://github.com/johnseyi/healthy-steps-foundation",
+    live: "https://healthystepsfoundation.org",
+    repo: "https://github.com/healthystepfoundation/healthy-steps-foundation",
   },
 ];
 

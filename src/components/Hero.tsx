@@ -12,7 +12,7 @@ export default function Hero() {
       <motion.div variants={container} initial="hidden" animate="show" className="max-w-[52rem]">
         <motion.p variants={item} className="mb-7 flex items-center gap-3 text-[0.88rem]">
           <span aria-hidden="true" className="h-px w-10 flex-none" style={{ background: "var(--accent)" }} />
-          <span style={{ color: "var(--muted)" }}>Open to full-stack roles, remote or in Kampala</span>
+          <span style={{ color: "var(--muted)" }}>Open to mobile app and full-stack work, remote or in Kampala</span>
         </motion.p>
 
         <motion.h1
