@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>John Oluwaseyi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+  // Some apps encode "#apps" as "%23apps", which GitHub Pages treats as a path.
+  var path = decodeURIComponent(location.pathname).replace(/^\/+/, "");
+  location.replace(path.charAt(0) === "#" ? "/" + path : "/");
+</script>
+</head>
+<body><a href="/">Go to johnseyi.github.io</a></body>
+</html>
