@@ -24,12 +24,12 @@ export const caseStudies: CaseStudy[] = [
     place: "Munich, Germany",
     role: "Sole engineer",
     period: "Mar 2026 to present",
-    scale: "1,300+ commits across 4 applications",
+    scale: "4 applications on one backend",
     tagline: "A tyre exporter's entire commercial operation, rebuilt as software.",
     constraint:
       "Okelcor ships tyres from Europe to more than 40 countries. Quotes, proforma invoices, packing lists and customs paperwork were moving by email and spreadsheet, and every order needed a human to assemble the document pack by hand.",
     built: [
-      "A Next.js storefront with a 260+ product catalogue, filtering, and instant quote requests. 700+ commits, live at okelcor.com.",
+      "A Next.js storefront with a 260+ product catalogue, filtering, and instant quote requests. Live at okelcor.com.",
       "A Laravel 13 API behind it: 178 migrations, ~75 admin controllers, Stripe and Adyen payments, Google 2FA, Pusher realtime, and a partner portal.",
       "Automated trade documents (proforma and commercial invoices, packing lists) generated as PDFs, plus VAT handling and EU export declarations.",
       "Customer-facing order tracking that exposes payment milestones and container movement, so buyers stop emailing to ask where their freight is.",
@@ -68,7 +68,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Okelcor Partner",
     place: "Ghana · Nigeria · UAE",
     role: "Sole engineer",
-    period: "Aug 2026 · shipped in 5 days",
+    period: "Aug 2026 to present",
     scale: "In production at partners.okelcor.com",
     tagline: "Replacing paper sales books for partners on unreliable mobile data.",
     constraint:
@@ -95,7 +95,7 @@ export const caseStudies: CaseStudy[] = [
     id: "cinemax",
     client: "Century Cinemax",
     place: "Kampala, Uganda",
-    role: "Engineer, 2-person team · 74% of commits",
+    role: "Engineer, 2-person team",
     period: "Jul 2026 to present",
     scale: "Multi-tenant platform, 17 bounded modules",
     tagline: "A cinema operating platform that keeps selling when the branch loses internet.",
@@ -184,7 +184,7 @@ export const apps: App[] = [
     name: "Okelcor Ops",
     kind: "Operations companion app",
     platform: "React Native · Expo · Android & iOS",
-    status: "In use by the operations team · v1 to live chat in four days",
+    status: "In use by the operations team",
     tagline: "The tyre exporter's back office in the team's pocket: orders, quotes, customers and security.",
     features: [
       "Sign-in with 2FA and recovery codes, a biometric app lock, and tokens held in the device's secure store.",
@@ -277,7 +277,7 @@ export const alsoShipped: Shipped[] = [
     year: "2026",
     name: "Uganda Health Information Exchange",
     what:
-      "Bank of Uganda BoU@60 hackathon build, solo in three days: six role-based portals, patient consent controls, and break-glass emergency access to locked records with audit flagging.",
+      "Bank of Uganda BoU@60 hackathon build, solo: six role-based portals, patient consent controls, and break-glass emergency access to locked records with audit flagging.",
     stack: "Next.js · TypeScript",
     live: "https://cool-smakager-893ca4.netlify.app/moh",
     repo: "https://github.com/Uganda-Hie/uganda-hie",
@@ -295,7 +295,7 @@ export const alsoShipped: Shipped[] = [
     year: "2026",
     name: "Chicken Tonight",
     what:
-      "Ordering platform concept for a 15-outlet Kampala restaurant group, built in a day: MTN Mobile Money flow, kitchen display system with per-ticket timers, live rider tracking.",
+      "Ordering platform concept for a 15-outlet Kampala restaurant group: MTN Mobile Money flow, kitchen display system with per-ticket timers, live rider tracking.",
     stack: "Next.js · Zustand",
     live: "https://chicken-tonight.vercel.app",
     repo: "https://github.com/centurycinemax6/chicken-tonight",
