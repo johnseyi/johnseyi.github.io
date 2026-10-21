@@ -121,21 +121,21 @@ export const caseStudies: CaseStudy[] = [
     client: "WellaPath",
     place: "Lagos, Nigeria",
     role: "Mobile & platform engineer",
-    period: "Nov 2025 to present",
+    period: "Mar 2026 to present",
     scale: "50 conditions · 76 clinical rules · 5,344 facilities",
-    tagline: "Clinical decision support for health workers, running entirely on the phone.",
+    tagline: "Clinical decision support for health workers and the public, running entirely on the phone.",
     constraint:
-      "Health workers in low-connectivity Nigerian clinics needed triage support that works with no signal, never transmits patient information, and never crosses the line from guidance into diagnosis.",
+      "Health workers and members of the public in Nigeria, often on poor connections, needed triage guidance that keeps working offline once installed, never transmits patient information, and never crosses the line from guidance into diagnosis.",
     built: [
       "The Flutter app end-to-end: a four-stage on-device engine, Dio networking, and Hive storage that lets the app boot from last-known-good config when the network is gone.",
       "A versioned clinical knowledge base covering conditions, rules, a 295-token dictionary and 5,344 facility records, published as independently versioned artifacts so content ships without an app release.",
-      "A 234-case validation bank with a deterministic generator, so a knowledge-base change can be regression-tested before it reaches a clinic.",
+      "A 234-case validation bank with a deterministic generator, so a knowledge-base change is regression-tested before it ships. The latest run passed 230 of 231 graded cases with zero under-triage.",
       "The public site, with launch signup by email or WhatsApp and phone numbers normalised to E.164 so the same person cannot register twice.",
     ],
     decision: {
-      title: "The build refuses to ship copy a clinician has not signed off",
+      title: "The website build refuses to publish copy a clinician has not signed off",
       body:
-        "All 48 danger-sign labels carry a reviewed flag, and the production build fails while any of them is still false. A second linter blocks diagnostic language anywhere in rendered copy. The product is allowed to say seek care now, never you have X. In the app itself, a red-flag result overrides the scoring output rather than being averaged with it, and scoring runs on-device so no patient data is transmitted. Clinical safety became something the pipeline enforces instead of something a checklist promises.",
+        "On the public site, all 48 danger-sign labels carry a reviewed flag, and the production build fails while any of them is still false. A second linter blocks diagnostic language anywhere in rendered copy. The product is allowed to say seek care now, never you have X. In the app itself, a red-flag result overrides the scoring output rather than being averaged with it, and scoring runs on-device so no patient data is transmitted. Clinical safety became something the pipeline enforces instead of something a checklist promises.",
     },
     diagram: "clinical",
     stack: ["Flutter", "Dart", "Hive", "TypeScript", "Next.js", "Neon Postgres", "Python"],
@@ -165,12 +165,13 @@ export const apps: App[] = [
     name: "WellaPath",
     kind: "Clinical decision support",
     platform: "Flutter · Android & iOS",
-    status: "Android build in Google Play internal testing",
-    tagline: "Triage guidance for health workers in Nigerian clinics, built to work with no signal at all.",
+    status: "Builds in Google Play internal testing and TestFlight",
+    tagline: "Triage guidance for health workers and the public in Nigeria, built to keep working offline once installed.",
     features: [
       "A four-stage decision engine that runs entirely on the phone, so no patient data ever leaves the device.",
       "Boots from last-known-good config stored in Hive when the network is gone, and picks up new clinical content without an app release.",
       "Red-flag results override the scoring output instead of being averaged with it.",
+      "1,400+ automated tests, plus a clinical validation bank that caught and fixed an under-triage case before any user saw it.",
     ],
     stack: ["Flutter", "Dart", "Hive", "Dio"],
     links: [
@@ -183,7 +184,7 @@ export const apps: App[] = [
     name: "Okelcor Ops",
     kind: "Operations companion app",
     platform: "React Native · Expo · Android & iOS",
-    status: "v1 to live chat in four days",
+    status: "In use by the operations team · v1 to live chat in four days",
     tagline: "The tyre exporter's back office in the team's pocket: orders, quotes, customers and security.",
     features: [
       "Sign-in with 2FA and recovery codes, a biometric app lock, and tokens held in the device's secure store.",

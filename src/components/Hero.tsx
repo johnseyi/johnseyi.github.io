@@ -30,7 +30,7 @@ export default function Hero() {
         >
           Four are in production right now: a B2B export platform for a German tyre exporter, a
           multi-tenant cinema operating system in Uganda, an offline sales network running across
-          three countries, and clinical decision support for Nigerian health workers.{" "}
+          three countries, and clinical decision support for health workers and the public in Nigeria.{" "}
           <span style={{ color: "var(--muted)" }}>On most of them I was the only engineer.</span>
         </motion.p>
 
